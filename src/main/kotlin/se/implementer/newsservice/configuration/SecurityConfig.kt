@@ -34,7 +34,7 @@ class SecurityConfig {
             "/swagger-resources/**",
           )
           .permitAll() // Security for internal APIs of this service
-          .requestMatchers("/v1/**")
+          .requestMatchers("/internal/**")
           .permitAll()
           .anyRequest().authenticated()
       }
