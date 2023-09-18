@@ -1,0 +1,8 @@
+server:
+  servlet:
+    contextPath: /news-service
+  port: 8088
+
+police-service:
+  url: http://localhost:8089/police-service/v1/police/news
+
