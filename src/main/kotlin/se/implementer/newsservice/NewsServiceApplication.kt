@@ -8,4 +8,6 @@ class NewsServiceApplication
 
 fun main(args: Array<String>) {
 	runApplication<NewsServiceApplication>(*args)
+	var swaggerUrl = "/news-service/swagger-ui/index.html#/";
+	println("Swagger URL: http://localhost:8088$swaggerUrl")
 }
