@@ -1,2 +1,1 @@
-# Java-Shell
-Shell service in Java
+News service in Kotlin
