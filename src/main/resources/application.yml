@@ -3,6 +3,7 @@ server:
     contextPath: /news-service
   port: 8087
 
-police-service:
-  url: http://localhost:8089/police-service/v1/police/news
+integration:
+  police-service:
+    url: http://localhost:8089/police-service/v1/police/news
 

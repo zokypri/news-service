@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RestController
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import org.springframework.web.bind.annotation.GetMapping
+import se.implementer.newsservice.service.NewsService
 
 @RestController
 @RequestMapping("internal/v1/news")
-class InternalNewsController {
+class InternalNewsController(val newsService: NewsService) {
 
   @Operation(
     summary = "Gets news.",
@@ -21,7 +22,7 @@ class InternalNewsController {
   )
   @GetMapping
   fun getNews(): String {
-    return "12344"
+    return  newsService.fetchSolnaNews()
   }
 
 }
