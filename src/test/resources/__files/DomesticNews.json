@@ -1,0 +1,18 @@
+{
+  "policeEvents": [
+    {
+      "id": 431488,
+      "summary": "Ett inbrottslarm i en fastighet aktiverades i Skytteholm. Ett fönster var öppet och en anmälan skrivs om olaga",
+      "url": "https://polisen.se/aktuellt/handelser/2023/juni/22/22-juni-0349-olaga-intrang-solna/",
+      "type": "Olaga intrång",
+      "name": "22 juni 03:49, Olaga intrång, Solna"
+    },
+    {
+      "id": 431463,
+      "summary": "Fullt utvecklad brand i Järva",
+      "url": "https://polisen.se/aktuellt/handelser/2023/juni/21/21-juni-1818-brand-solna/",
+      "type": "Brand",
+      "name": "21 juni 18:18, Brand, Solna"
+    }
+  ]
+}

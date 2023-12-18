@@ -1,0 +1,7 @@
+
+police:
+  url: http://localhost:${wiremock.server.port}
+
+
+
+
