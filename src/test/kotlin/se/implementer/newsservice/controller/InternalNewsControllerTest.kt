@@ -2,6 +2,8 @@ package se.implementer.newsservice.controller
 
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
+import mock.createFirstPoliceEvent
+import mock.createSecondPoliceEvent
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
@@ -14,7 +16,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import se.implementer.newsservice.configuration.SecurityConfig
 import se.implementer.newsservice.model.DomesticNews
-import se.implementer.newsservice.model.PoliceEvent
 import se.implementer.newsservice.service.NewsService
 
 @WebMvcTest(InternalNewsController::class)
@@ -43,23 +44,5 @@ class InternalNewsControllerTest {
             .andExpect(content().json(InternalNewsControllerTest::class.java.classLoader.getResource("__files/DomesticNews.json")
                 ?.readText() ?: ""))
     }
-
-    fun createFirstPoliceEvent(): PoliceEvent {
-        return PoliceEvent(
-            id = 431488,
-            summary = "summary 1",
-            url = "url1",
-            topic = "22 juni 03:49, Olaga intrång, Solna",
-            type = "Olaga intrång",
-        )
-    }
-    fun createSecondPoliceEvent() =
-        PoliceEvent(
-            id = 431463,
-            summary = "Fullt utvecklad brand i Järva",
-            url = "https://polisen.se/aktuellt/handelser/2023/juni/21/21-juni-1818-brand-solna/",
-            topic = "21 juni 18:18, Brand, Solna",
-            type = "Brand",
-        )
 
 }
