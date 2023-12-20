@@ -2,8 +2,8 @@
   "policeEvents": [
     {
       "id": 431488,
-      "summary": "Ett inbrottslarm i en fastighet aktiverades i Skytteholm. Ett fönster var öppet och en anmälan skrivs om olaga",
-      "url": "https://polisen.se/aktuellt/handelser/2023/juni/22/22-juni-0349-olaga-intrang-solna/",
+      "summary": "summary 1",
+      "url": "url1",
       "type": "Olaga intrång",
       "name": "22 juni 03:49, Olaga intrång, Solna"
     },
