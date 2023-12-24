@@ -20,9 +20,6 @@ class PoliceClientTest {
     private lateinit var mockWebServer: MockWebServer
 
     @Autowired
-    private lateinit var okHttpClient: OkHttpClient
-
-    @Autowired
     private lateinit var policeClient: PoliceClient
 
     @BeforeEach
