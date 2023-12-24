@@ -1,4 +1,4 @@
-package mock
+package se.implementer.newsservice.mock
 
 import se.implementer.newsservice.model.DomesticNews
 import se.implementer.newsservice.model.PoliceEvent

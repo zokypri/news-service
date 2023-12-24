@@ -10,7 +10,7 @@ class OkHttpConfig {
     @Bean
     fun okHttp(): OkHttpClient {
         return OkHttpClient.Builder()
-            // Add any configurations you need
+            // Add any configurations if needed later
             .build()
     }
 }

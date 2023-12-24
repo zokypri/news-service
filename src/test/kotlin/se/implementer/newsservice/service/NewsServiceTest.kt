@@ -4,8 +4,8 @@ import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
-import mock.createDomesticNews
-import mock.createFirstPoliceEvent
+import se.implementer.newsservice.mock.createDomesticNews
+import se.implementer.newsservice.mock.createFirstPoliceEvent
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

@@ -2,8 +2,8 @@ package se.implementer.newsservice.controller
 
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
-import mock.createFirstPoliceEvent
-import mock.createSecondPoliceEvent
+import se.implementer.newsservice.mock.createFirstPoliceEvent
+import se.implementer.newsservice.mock.createSecondPoliceEvent
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
