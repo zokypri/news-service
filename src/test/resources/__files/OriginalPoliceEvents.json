@@ -1,0 +1,28 @@
+[
+  {
+    "id": 431488,
+    "datetime": "2022-10-13 8:34:13 +02:00",
+    "name": "22 juni 03:49, Olaga intrång, Solna",
+    "summary": "summary 1",
+    "url": "url1",
+    "type": "Olaga intrång",
+    "location": {
+      "name": "Solna",
+      "gps": "59.368879,18.008433"
+    }
+  },
+  {
+    "id": 431463,
+    "datetime": "2022-10-03 13:20:50 +02:00",
+    "name": "21 juni 18:18, Brand, Solna",
+    "summary": "Fullt utvecklad brand i Järva",
+    "url": "https://polisen.se/aktuellt/handelser/2023/juni/21/21-juni-1818-brand-solna/",
+    "type": "Brand",
+    "location": {
+      "name": "Solna",
+      "gps": "59.368879,18.008433"
+    }
+  }
+]
+
+
