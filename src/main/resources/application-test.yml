@@ -1,7 +1,8 @@
 
 integration:
   police-service:
-    url:  http://localhost:8080//police-service/v1/police/news
+    url:  http://localhost:${wiremock.server.port}/police-service/v1/police/news
+
 
 
 
