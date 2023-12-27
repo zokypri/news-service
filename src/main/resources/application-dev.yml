@@ -5,5 +5,5 @@ server:
 
 integration:
   police-service:
-    url: http://police-service:8089/police-service/v1/police/news
+    url: http://localhost:8089/police-service/v1/police/news
 
