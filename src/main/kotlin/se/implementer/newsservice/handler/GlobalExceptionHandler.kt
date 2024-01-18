@@ -2,7 +2,6 @@ package se.implementer.newsservice.handler
 
 import com.fasterxml.jackson.databind.exc.MismatchedInputException
 import org.springframework.http.HttpStatus
-import org.springframework.http.HttpStatusCode
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
@@ -27,7 +26,7 @@ class GlobalExceptionHandler {
     fun handleException(error: MismatchedInputException): ResponseEntity<ResponseError> {
         return createError(error, HttpStatus.BAD_REQUEST)
     }
-    private fun createError(error: Throwable, responseCode: HttpStatusCode): ResponseEntity<ResponseError> {
+    private fun createError(error: Throwable, responseCode: HttpStatus): ResponseEntity<ResponseError> {
         logger.severe("error: ${error.message}")
         return ResponseEntity(
             ResponseError(
