@@ -6,4 +6,5 @@ server:
 integration:
   police-service:
     url: http://localhost:8089/police-service/v1/police/news
-
+  sport-service:
+    url: http://localhost:8081/sport-service/external/v1/sport-news

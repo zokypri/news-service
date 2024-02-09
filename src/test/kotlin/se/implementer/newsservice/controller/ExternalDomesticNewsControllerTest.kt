@@ -18,10 +18,10 @@ import se.implementer.newsservice.configuration.SecurityConfig
 import se.implementer.newsservice.model.DomesticNews
 import se.implementer.newsservice.service.NewsService
 
-@WebMvcTest(InternalNewsController::class)
+@WebMvcTest(ExternalDomesticNewsController::class)
 @Import(SecurityConfig::class)
 @AutoConfigureMockMvc
-class InternalNewsControllerTest {
+class ExternalDomesticNewsControllerTest {
 
     @Autowired
     private lateinit var mockMvc: MockMvc
@@ -38,10 +38,10 @@ class InternalNewsControllerTest {
             )
         )
 
-        mockMvc.perform(get("/internal/v1/domestic-news"))
+        mockMvc.perform(get("/external/v1/domestic-news"))
             .andExpect(status().isOk)
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(content().json(InternalNewsControllerTest::class.java.classLoader.getResource("__files/DomesticNews.json")
+            .andExpect(content().json(ExternalDomesticNewsControllerTest::class.java.classLoader.getResource("__files/DomesticNews.json")
                 ?.readText() ?: ""))
     }
 

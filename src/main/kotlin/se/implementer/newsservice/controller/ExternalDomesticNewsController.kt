@@ -4,13 +4,16 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
+import java.util.logging.Logger
 import org.springframework.web.bind.annotation.GetMapping
 import se.implementer.newsservice.model.DomesticNews
 import se.implementer.newsservice.service.NewsService
 
 @RestController
-@RequestMapping("internal/v1/domestic-news")
-class InternalNewsController(val newsService: NewsService) {
+@RequestMapping("external/v1/domestic-news")
+class ExternalDomesticNewsController(val newsService: NewsService) {
+
+  private val logger = Logger.getLogger(ExternalDomesticNewsController::class.java.name)
 
   @Operation(
     summary = "Fetches domestic news.",
@@ -23,7 +26,7 @@ class InternalNewsController(val newsService: NewsService) {
   )
   @GetMapping
   fun fetchDomesticNews(): DomesticNews {
-    return  newsService.fetchDomesticNews()
+    return newsService.fetchDomesticNews()
   }
 
 }

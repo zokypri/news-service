@@ -9,21 +9,17 @@ import okhttp3.Request
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import org.springframework.web.util.UriComponentsBuilder
-import se.implementer.newsservice.model.PoliceEvent
+import se.implementer.newsservice.model.ExternalSportsNewsResponse
 
 @Component
-class PoliceClient(private val okHttpClient: OkHttpClient,
-                   @Value("\${integration.police-service.url}")  val baseUrl: String) {
+class SportClient (private val okHttpClient: OkHttpClient,
+                   @Value("\${integration.sport-service.url}")  val baseUrl: String) {
 
-    private val cityOfSolna = "Solna"
+    private val logger = Logger.getLogger(SportClient::class.java.name)
 
-    private val logger = Logger.getLogger(PoliceClient::class.java.name)
-
-    fun fetchSolnaNews(): List<PoliceEvent> {
-
+    fun fetchSportNews(): ExternalSportsNewsResponse {
         val uri = UriComponentsBuilder
             .fromUriString(baseUrl)
-            .queryParam("city", cityOfSolna )
             .build()
             .toUriString()
 
@@ -35,6 +31,6 @@ class PoliceClient(private val okHttpClient: OkHttpClient,
 
         val objectMapper = ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 
-        return objectMapper.readValue(response, object : TypeReference<List<PoliceEvent>>() {})
+        return objectMapper.readValue(response, object : TypeReference<ExternalSportsNewsResponse>() {})
     }
 }

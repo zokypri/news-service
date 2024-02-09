@@ -36,7 +36,7 @@ class NewsServiceApplicationTests {
 			)
 		)
 
-		mockMvc.perform(MockMvcRequestBuilders.get("/internal/v1/domestic-news"))
+		mockMvc.perform(MockMvcRequestBuilders.get("/external/v1/domestic-news"))
 			.andExpect(MockMvcResultMatchers.status().isOk)
 			.andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
 			.andExpect(
